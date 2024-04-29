@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+        <label for="name">Name and Surname</label>
+        <input type="text" id="name">
+
+        <label for="kilometers">km to travel</label>
+        <input type="number" id="kilometers">
+
+        <label for="age"></label>
+        <select name="age" id="age">
+            <option value="adult">Adult</option>
+            <option value="underage">Underage</option>
+            <option value="over65">Over 65</option>
+        </select>
+
+        <button type="submit" onclick="myCalc()">Submit</button>
+        <button onclick="myReset()">Reset</button>
+    </form>
+    
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
