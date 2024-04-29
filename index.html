@@ -6,25 +6,78 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="bg-pink center">
+    <div class="container-60">
 
-    <form method="POST">
-        <label for="name">Name and Surname</label>
-        <input type="text" id="name">
+        <h2>Calculate the price of your ticket</h2>
 
-        <label for="kilometers">km to travel</label>
-        <input type="number" id="kilometers">
+        <div class="white-div padding-x120">
+            <form method="POST">
+                <div class="row margin-y">
+                    <div class="col-33">
+                        <label for="name">Name and Surname</label>
+                    </div>
+                    <div class="col-33">
+                        <label for="kilometers">km to travel</label>
+                    </div>
+                    <div class="col-33">
+                        <label for="age">Age</label>
+                    </div>
+                </div>
+                <div class="row margin-y">
+                    <div class="col-33">
+                        <input type="text" id="name">
+                    </div>
+                    <div class="col-33">
+                        <input type="number" id="kilometers">
+                    </div>
+                    <div class="col-33">
+                        <select name="age" id="age">
+                            <option value="adult">Adult</option>
+                            <option value="underage">Underage</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row margin-y">
+                    <div class="col">
+                        <button type="button" onclick="myCalc()">Generate</button>
+                        <button type="button" onclick="myReset()">Reset</button>
+                    </div> 
+                </div>    
+            </form>
+        </div>
 
-        <label for="age"></label>
-        <select name="age" id="age">
-            <option value="adult">Adult</option>
-            <option value="underage">Underage</option>
-            <option value="over65">Over 65</option>
-        </select>
+        <h2>Your Ticket</h2>
 
-        <button type="button" onclick="myCalc()">Generate</button>
-        <button type="button" onclick="myReset()">Reset</button>
-    </form>
+        <div class="white-div">
+
+            <h2 class="color-black">Passenger detail</h2>
+
+            <div class="row border">
+                <div class="col-20 bg-gray">
+                    <h3 class="mb-50">Passenger name</h3>
+                    <h4 id="userName">--------</h4>
+                </div>
+                <div class="col-20">
+                    <h3 class="mb-50">Offer</h3>
+                    <p id="userOffer">----</p>
+                </div>
+                <div class="col-20">
+                    <h3 class="mb-50">Carriage</h3>
+                    <p id="userCarriage">----</p>
+                </div>
+                <div class="col-20">
+                    <h3 class="mb-50">CP Code</h3>
+                    <p id="userCpCode">----</p>
+                </div>
+                <div class="col-20">
+                    <h3 class="mb-50">Ticket price</h3>
+                    <p id="userPrice">----</p>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script type="text/javascript" src="js/main.js"></script>
 </body>
